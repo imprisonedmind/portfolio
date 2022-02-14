@@ -1,10 +1,11 @@
 // /pages/api/spotify.js
 import querystring from 'querystring';
+import process from 'process';
 
 const {
-  SPOTIFY_CLIENT_ID: client_id,
-  SPOTIFY_CLIENT_SECRET: client_secret,
-  SPOTIFY_REFRESH_TOKEN: refresh_token,
+  NEXT_PUBLIC_SPOTIFYSPOTIFY_CLIENT_ID: client_id,
+  NEXT_PUBLIC_SPOTIFYSPOTIFY_CLIENT_SECRET: client_secret,
+  NEXT_PUBLIC_SPOTIFYSPOTIFY_REFRESH_TOKEN: refresh_token,
 } = process.env;
 
 const basic = Buffer.from(`${client_id}:${client_secret}`).toString('base64');
