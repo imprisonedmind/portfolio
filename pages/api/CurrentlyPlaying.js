@@ -1,6 +1,5 @@
 // /pages/api/spotify.js
 import querystring from 'querystring';
-import process from 'process';
 
 const {
   NEXT_PUBLIC_SPOTIFY_CLIENT_ID: client_id,
