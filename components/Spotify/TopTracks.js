@@ -51,7 +51,7 @@ const TopTracks = ({ showTracks, setShowTracks }) => {
                                 <div className="absolute bottom-16 left-6 h-8 w-8 -mt-7 rounded-full">
                                     <Image
                                         alt={'spotify'}
-                                        src={'/Icons/spotify.svg'}
+                                        src={'/icons/spotify.svg'}
                                         height={200}
                                         width={200}
                                         className="  shadow-xl"
