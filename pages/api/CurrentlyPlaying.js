@@ -3,9 +3,9 @@ import querystring from 'querystring';
 import process from 'process';
 
 const {
-  NEXT_PUBLIC_SPOTIFYSPOTIFY_CLIENT_ID: client_id,
-  NEXT_PUBLIC_SPOTIFYSPOTIFY_CLIENT_SECRET: client_secret,
-  NEXT_PUBLIC_SPOTIFYSPOTIFY_REFRESH_TOKEN: refresh_token,
+  NEXT_PUBLIC_SPOTIFY_CLIENT_ID: client_id,
+  NEXT_PUBLIC_SPOTIFY_CLIENT_SECRET: client_secret,
+  NEXT_PUBLIC_SPOTIFY_REFRESH_TOKEN: refresh_token,
 } = process.env;
 
 const basic = Buffer.from(`${client_id}:${client_secret}`).toString('base64');
