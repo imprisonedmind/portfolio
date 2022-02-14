@@ -6,9 +6,6 @@
 .pnp.js
 .env
 
-#custom
-.mp4
-
 # testing
 /coverage
 
