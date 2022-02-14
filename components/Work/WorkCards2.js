@@ -16,7 +16,7 @@ const WorkCards2 = ({arr}) => {
                         alt={item.alt}
                         src={item.src}
                         layout={'fill'}
-                        onLoad={() => setLoaded(true)}
+                        onLoadingComplete={() => setLoaded(true)}
                         className={'object-cover z-10'}
                     />
                     <div className="flex items-center justify-center w-full h-full">

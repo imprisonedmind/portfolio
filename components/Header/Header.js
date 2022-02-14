@@ -37,7 +37,7 @@ const Landing = () => {
                     alt={'Luke Stephens'}
                     src={'/images/dude.png'}
                     layout={'fill'}
-                    onLoad={() => setLoaded(true)}
+                    onLoadingComplete={() => setLoaded(true)}
                 />
             </motion.div>
             {/* HI I am container */}
