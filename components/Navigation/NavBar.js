@@ -16,13 +16,13 @@ const NavBar = () => {
             </div>
             <div className="flex">
                 <a href={"https://dribbble.com/LukeStephens"} target={"_blank"} rel="noreferrer">
-                    <NavBarIcon src={"/icons/dribbble.svg"} />
+                    <NavBarIcon src={"/Icons/dribbble.svg"} />
                 </a>
                 <a href={"https://www.behance.net/lukestephens"} target={"_blank"} rel="noreferrer">
-                    <NavBarIcon src={"/icons/behance.svg"} />
+                    <NavBarIcon src={"/Icons/behance.svg"} />
                 </a>
                 <a href={"https://za.linkedin.com/in/luke-stephens-za"} target={"_blank"} rel="noreferrer">
-                    <NavBarIcon src={"/icons/linkedin.svg"} />
+                    <NavBarIcon src={"/Icons/linkedin.svg"} />
                 </a>
 
             </div>

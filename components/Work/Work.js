@@ -5,22 +5,22 @@ import WorkCards2 from "./WorkCards2"
 const Work = () => {
     const arr = [
         {
-            'src': '/images/hide.jpg',
+            'src': '/Images/hide.jpg',
             'link': 'https://dribbble.com/shots/17486222-You-caught-me/attachments/12622564?mode=media',
             'alt': 'Blender self portrait hiding'
         },
         {
-            'src': '/images/tpose.jpg',
+            'src': '/Images/tpose.jpg',
             'link': 'https://dribbble.com/shots/17486246-T-pose/attachments/12622589?mode=media',
             'alt': 'Blender self portrait T-pose'
         },
         {
-            'src': '/images/read2.jpg',
+            'src': '/Images/read2.jpg',
             'link': 'https://dribbble.com/shots/17486273-Read-a-book/attachments/12622629?mode=media',
             'alt': 'Blender Self Portrait - Read a book!'
         },
         {
-            'src': '/images/skateboard.jpg',
+            'src': '/Images/skateboard.jpg',
             'link': 'https://dribbble.com/shots/15649429-Dude-with-skateboard/attachments/7442255?mode=media',
             'alt': 'Blender Self Portrait as a Skater'
         },
@@ -28,17 +28,17 @@ const Work = () => {
 
     const arr2 = [
         {
-            'src': '/images/portal.png',
+            'src': '/Images/portal.png',
             'link': '/testing',
             'alt': 'Portal UI Design'
         },
         {
-            'src': '/images/hyyp.png',
+            'src': '/Images/hyyp.png',
             'link': '/api',
             'alt': 'Alarm App UI Design'
         },
         {
-            'src': '/images/erin.jpg',
+            'src': '/Images/erin.jpg',
             'link': '/api',
             'alt': 'Erin App UI Design'
         },

@@ -35,7 +35,7 @@ const Landing = () => {
                 className="relative  h-[900px] w-[800px] z-20">
                 <Image
                     alt={'Luke Stephens'}
-                    src={'/images/dude.png'}
+                    src={'/Images/dude.png'}
                     layout={'fill'}
                     onLoadingComplete={() => setLoaded(true)}
                 />
