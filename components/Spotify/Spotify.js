@@ -42,7 +42,7 @@ const Spotify = ({ showTracks, setShowTracks }) => {
                 <div className="relative h-12 w-12">
                     <Image
                         alt={album.name}
-                        src={album.isPlaying ? album.albumImageUrl : `/Icons/spotify.svg`}
+                        src={album.isPlaying ? album.albumImageUrl : `/icons/spotify.svg`}
                         layout="fill"
                         className="rounded-full"
                     />
