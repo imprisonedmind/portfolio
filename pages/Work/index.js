@@ -52,7 +52,7 @@ import WorkCards2 from "../../components/Work/WorkCards2"
 
     const arr3 = [
         {
-            'src': '/Images/Lockdown.png',
+            'src': '/Images/lockdown.png',
             'link': 'https://www.youtube.com/watch?v=uiWCEWqaYfY',
             'alt': 'The Great Lock Down Animation'
         },
