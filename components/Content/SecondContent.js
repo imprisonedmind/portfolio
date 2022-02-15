@@ -1,6 +1,4 @@
 import Hero from "../Hero/Hero"
-import NavBar from "../Navigation/NavBar"
-import Background from "../About/Background"
 import Work from "../Work/Work"
 
 

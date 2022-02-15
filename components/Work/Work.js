@@ -39,7 +39,7 @@ const Work = () => {
         },
         {
             'src': '/Images/erin.jpg',
-            'link': '/api',
+            'link': '/erin',
             'alt': 'Erin App UI Design'
         },
         {

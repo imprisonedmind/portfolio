@@ -63,7 +63,7 @@ import WorkCards2 from "../../components/Work/WorkCards2"
         },
         {
             'src': '/Images/erin.jpg',
-            'link': '/api',
+            'link': '/erin',
             'alt': 'Erin App UI Design'
         },
         {

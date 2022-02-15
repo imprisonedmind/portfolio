@@ -1,8 +1,6 @@
 import Image from "next/image"
 import { Fragment } from "react/cjs/react.production.min"
-import NavBar from "../Navigation/NavBar"
 import Spotify from "../Spotify/Spotify"
-import SpotiyTracks from "../Spotify/Spotify"
 import TopTracks from "../Spotify/TopTracks"
 import Text from "../Text/Text"
 import { useState } from "react"
