@@ -64,30 +64,6 @@ const Hero = () => {
             if (isDeleting && j == 0) {
                 isDeleting = false
                 setPhraseState([]);
-                // if (phrase[i] == 'human.') {
-                //     setTimeout(() => {
-                //         setColour([colours[0]])
-                //     }, 300);
-
-                // }
-                // if (phrase[i] == 'designer.') {
-                //     setTimeout(() => {
-                //         setColour([colours[1]])
-                //     }, 300);
-
-                // }
-                // if (phrase[i] == 'coder.') {
-                //     setTimeout(() => {
-                //         setColour([colours[2]])
-                //     }, 300);
-
-                // }
-                // if (phrase[i] == 'creative.') {
-                //     setTimeout(() => {
-                //         setColour([colours[3]])
-                //     }, 300);
-
-                // }
                 i++
                 if (i == phrase.length) {
                     setTimeout(() => {
@@ -109,7 +85,6 @@ const Hero = () => {
         writePhrase()
 
         const resetPhrase = () => {
-            console.log('unmount type')
             setPhraseState(null)
         }
 

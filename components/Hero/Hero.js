@@ -16,22 +16,37 @@ const Hero = () => {
             setPaused(!paused)
             vid.current.pause()
         }
+    }
 
+
+    const setVideoTime = () => {
+        if (vid.current) {
+            vid.current.currentTime = 8
+            vid.current.play()
+        }
+    }
+
+    const VideoTimer = () => {
+        if (!vid.current.paused) {
+            setInterval(() => {
+                console.log(Math.round(vid.current.currentTime))
+                if ((Math.round(vid.current.currentTime) == 40)) {
+                    vid.current.currentTime = 8
+                }
+            }, 900)
+        }
     }
 
     useEffect(() => {
-        setTimeout(() => {
-            setLoaded(true)
-            if (vid.current) {
-                setInterval(() => {
-                    if (Math.round(vid.currentTime) == 40) {
-                        vid.current.currentTime = 8
-                        vid.current.play()
-                    }
-                }, 900);
-            }
-        }, 3000);
+        setVideoTime()
+        const time = setTimeout(() => {
+            VideoTimer()
+        }, 900);
+        
+        return clearTimeout(time)
     }, [])
+
+
 
     return (
         <div className={`h-auto  w-full`}>
@@ -39,16 +54,15 @@ const Hero = () => {
             <div className='flex group flex-wrap item-center justify-center w-full h-auto mt-12 px-40'>
                 <div className='realtive w-full h-[500px] rotate-[3deg] rounded-3xl backdrop-blur-sm bg-gray-50/10' />
                 <div className='absolute  w-1/2 h-[500px] -rotate-[1deg] rounded-3xl backdrop-blur-sm overflow-hidden bg-gray-50/10'>
-                    {loaded ? <video ref={vid} className='w-full h-auto' autoPlay muted loop>
+                    <video poster={'/Images/showreel.png'} ref={vid} className='w-full h-auto' autoPlay muted>
                         <source src={vidSrc} type={'video/mp4'} />
                     </video> :
-                        <div className='w-full h-full animate-pulse bg-gray-50/20'>
-                        </div>}
+                    <div className='w-full h-full animate-pulse bg-gray-50/20'>
+                    </div>
                 </div>
                 <div className='flex w-full h-full -mt-[350px] text-purple-500'>
                     {!paused && <PauseIcon onClick={() => handleClick()} className={`h-[200px] m-auto z-20 opacity-0 scale-80 group-hover:opacity-100 cursor-pointer bg-white rounded-full shadow-2xl`} />}
                     {paused && <PlayIcon onClick={() => handleClick()} className={`h-[200px] m-auto z-20 opacity-0 group-hover:opacity-100 cursor-pointer bg-white rounded-full shadow-2xl`} />}
-
                 </div>
 
             </div>

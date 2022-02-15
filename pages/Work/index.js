@@ -1,5 +1,5 @@
 import Header from "../../components/Header/Header"
-import Layout from "../../components/Layout/Layout"
+import PageLayout from "../../components/Layout/PageLayout"
 import WorkCards from "../../components/Work/WorkCards"
 import WorkCards2 from "../../components/Work/WorkCards2"
 
@@ -39,7 +39,7 @@ import WorkCards2 from "../../components/Work/WorkCards2"
         },
         {
             'src': '/Images/erin.jpg',
-            'link': '/api',
+            'link': '/erin',
             'alt': 'Erin App UI Design'
         },
         {
@@ -52,18 +52,18 @@ import WorkCards2 from "../../components/Work/WorkCards2"
 
     const arr3 = [
         {
-            'src': '/Images/portal.png',
-            'link': '/testing',
-            'alt': 'Portal UI Design'
+            'src': '/Images/LockDown.png',
+            'link': 'https://www.youtube.com/watch?v=uiWCEWqaYfY',
+            'alt': 'The Great Lock Down Animation'
         },
         {
-            'src': '/Images/hyyp.png',
-            'link': '/api',
-            'alt': 'Alarm App UI Design'
+            'src': '/Images/4.png',
+            'link': 'https://www.youtube.com/watch?v=8NURHXKHeaA',
+            'alt': 'The Blinki and Sqeeki Show Animation'
         },
         {
-            'src': '/Images/erin.jpg',
-            'link': '/erin',
+            'src': '/Images/mind.png',
+            'link': 'https://www.youtube.com/watch?v=pQMBYXwfh20',
             'alt': 'Erin App UI Design'
         },
         {
@@ -75,7 +75,7 @@ import WorkCards2 from "../../components/Work/WorkCards2"
     ]
 
 const Work = () => {
-    return (<Layout>
+    return (<PageLayout>
         <div className="flex flex-wrap justify-around w-full h-auto mt-7 px-[15%]">
                 <div className="w-full pl-7 mb-4 text-sm opacity-50 text-green-500">
                     <h1>UI Design</h1>
@@ -90,7 +90,7 @@ const Work = () => {
                 </div>
                 <WorkCards2 arr={arr3}/>
             </div>
-    </Layout>)
+    </PageLayout>)
 }
 
 export default Work

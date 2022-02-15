@@ -1,18 +1,27 @@
-import Logo from "../Logo/Logo"
 import NavBarElement from "./NavBarElement"
-import Text from "../Text/Text"
 import NavBarIcon from "./NavBarIcon"
-import Link from "next/link"
-import { Fragment } from "react/cjs/react.production.min"
+import {useEffect, useState} from "react"
+import Router, {useRouter} from "next/router"
 
 const NavBar = () => {
+    const [colour, setColour] = useState()
+    const router = useRouter()
+
+    console.log(router)
+
+    useEffect(() => {
+        if (router.asPath.includes('Work')) {
+            setColour('bg-green-500')
+        }
+    }, [])
+
     return (
         <div className="flex justify-between w-full h-[80px] py-[25px] px-[15%]">
             <div className="flex">
-                <NavBarElement title={"Home"} link={'/'} />
-                <NavBarElement title={"Work"} link={'/Work'}/>
-                <NavBarElement title={"Projects"} link={'Projects'} />
-                <NavBarElement title={"Words"} link={'words'} />
+                <NavBarElement title={"Home"} link={'/'} colour={router.asPath == '/' ? 'bg-blue-500' : 'bg-gray-100/10'} />
+                <NavBarElement title={"Work"} link={'/Work'} colour={router.asPath.includes('/Work') ? 'bg-pink-500' : 'bg-gray-100/10'} />
+                <NavBarElement title={"Projects"} link={'/Projects'} colour={router.asPath.includes('/Projects') ? 'bg-green-500' : 'bg-gray-100/10'} />
+                <NavBarElement title={"Words"} link={'/Words'} colour={router.asPath == '/Words' ? 'bg-orange-500' : 'bg-purple-100/10'} />
             </div>
             <div className="flex">
                 <a href={"https://dribbble.com/LukeStephens"} target={"_blank"} rel="noreferrer">
@@ -23,6 +32,9 @@ const NavBar = () => {
                 </a>
                 <a href={"https://za.linkedin.com/in/luke-stephens-za"} target={"_blank"} rel="noreferrer">
                     <NavBarIcon src={"/Icons/linkedin.svg"} />
+                </a>
+                <a href={"https://github.com/imprisonedmind"} target={"_blank"} rel="noreferrer">
+                    <NavBarIcon src={"/Icons/github.svg"} />
                 </a>
 
             </div>

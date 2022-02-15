@@ -124,7 +124,7 @@ const Erin = () => {
                             alt="Erin Mobile App"
                             src={'/Images/erin/erin-phone2.png'}
                             layout={'fill'}
-                            className={'object-cover rounded-3xl'}
+                            className={'object-cover rounded-3xl backdrop-blur-md bg-gray-100/10'}
                         />
                     </div>
                     <div className="col-span-2 flex flex-col px-[5%]">
@@ -155,7 +155,7 @@ const Erin = () => {
 
                 {/* Video */}
                 <div className="w-full h-auto px-[10.3%]">
-                    <div className="w-full h-[600px] rounded-3xl overflow-hidden mt-20">
+                    <div className="w-full h-[600px] rounded-3xl overflow-hidden mt-20 backdrop-blur-md bg-gray-100/10">
                         <iframe id="ytplayer" type="text/html" width="100%" height="100%"
                             src="https://www.youtube.com/embed/pQMBYXwfh20?controls=0&loop=1&modestbranding=1"
                             frameBorder="0" allowFullScreen />
@@ -173,7 +173,7 @@ const Erin = () => {
                                 alt={item.alt}
                                 src={item.src}
                                 layout={'fill'}
-                                className={'object-contain'}
+                                className={'object-contain '}
                             />
                         </div>
                     })}
@@ -185,7 +185,7 @@ const Erin = () => {
                         alt="UserFlow"
                         src={'/Images/erin/userflow.png'}
                         layout={"fill"}
-                        className={'object-cover rounded-3xl'}
+                        className={'object-cover rounded-3xl backdrop-blur-md bg-gray-100/10'}
                     />
                 </div>
 
@@ -199,7 +199,7 @@ const Erin = () => {
                                 alt={item.alt}
                                 src={item.src}
                                 layout={"fill"}
-                                className={'object-contain'}
+                                className={'object-contain '}
                             />
                         </div>
                     })}
