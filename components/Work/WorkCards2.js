@@ -11,7 +11,7 @@ const WorkCards2 = ({arr}) => {
                 target={'-_blank'}
                 key={Math.random(item.length)}
                 href={item.link}>
-                <div className={`${!loaded ? `animate-pulse` : null} relative flex  h-[350px] w-[300px] mx-4 mb-12 cursor-pointer hover:scale-[1.05] duration-200 ease-in-out rounded-3xl overflow-hidden backdrop-blur-md bg-gray-50/10`}>
+                <div className={`${!loaded ? `animate-pulse` : null} relative flex  h-[400px] w-[300px] mx-4 mb-12 cursor-pointer hover:scale-[1.05] duration-200 ease-in-out rounded-3xl overflow-hidden backdrop-blur-md bg-gray-50/10`}>
                     <Image
                         alt={item.alt}
                         src={item.src}

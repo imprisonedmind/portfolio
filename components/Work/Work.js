@@ -64,7 +64,7 @@ const Work = () => {
                 </div>
                 <WorkCards2 arr={arr} />
             </div>
-            <div className="mx-auto text-xl w-max px-6 py-2 rounded-2xl backdrop-blur-sm hover:shadow-xl hover:bg-blue-500 hover:scale-[1.05] duration-75 ease-in-out cursor-pointer border-[0.1px] border-white/20 bg-gray-50/10">
+            <div className="mx-auto text-xl w-max px-6 py-2 rounded-2xl backdrop-blur-sm hover:shadow-xl hover:bg-pink-500 hover:scale-[1.05] duration-75 ease-in-out cursor-pointer border-[0.1px] border-white/20 bg-gray-50/10">
                 <Link
                 passHref
                 href={'/Work'}>
