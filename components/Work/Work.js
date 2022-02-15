@@ -3,6 +3,7 @@ import WorkCards from "./WorkCards"
 import WorkCards2 from "./WorkCards2"
 
 const Work = () => {
+
     const arr = [
         {
             'src': '/Images/hide.jpg',
@@ -25,7 +26,7 @@ const Work = () => {
             'alt': 'Blender Self Portrait as a Skater'
         },
     ]
-
+    
     const arr2 = [
         {
             'src': '/Images/portal.png',
@@ -43,7 +44,7 @@ const Work = () => {
             'alt': 'Erin App UI Design'
         },
         {
-            'src': '/',
+            'src': '/Images/empty.png',
             'link': '/',
             'alt': 'Coming Soon'
         }

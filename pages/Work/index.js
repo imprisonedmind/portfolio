@@ -43,7 +43,7 @@ import WorkCards2 from "../../components/Work/WorkCards2"
             'alt': 'Erin App UI Design'
         },
         {
-            'src': '/',
+            'src': '/Images/empty.png',
             'link': '/',
             'alt': 'Coming Soon'
         }
@@ -52,7 +52,7 @@ import WorkCards2 from "../../components/Work/WorkCards2"
 
     const arr3 = [
         {
-            'src': '/Images/LockDown.png',
+            'src': '/Images/Lockdown.png',
             'link': 'https://www.youtube.com/watch?v=uiWCEWqaYfY',
             'alt': 'The Great Lock Down Animation'
         },
@@ -67,7 +67,7 @@ import WorkCards2 from "../../components/Work/WorkCards2"
             'alt': 'Erin App UI Design'
         },
         {
-            'src': '/',
+            'src': '/Images/empty.png',
             'link': '/',
             'alt': '/'
         }
