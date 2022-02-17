@@ -13,6 +13,10 @@
     src: url('../public/fonts/Inter-VariableFont_slnt\,wght.ttf');
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  backface-visibility: hidden;
+}
 
 /* HTML */
 html {

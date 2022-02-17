@@ -2,7 +2,7 @@ import {Fragment, useState} from "react"
 import Image from "next/image"
 import Link from "next/link"
 
-const WorkCards2 = ({arr}) => {
+const WorkCards2 = ({arr, colours}) => {
     const [loaded, setLoaded] =useState(false)
 
     return (<Fragment>
@@ -24,6 +24,11 @@ const WorkCards2 = ({arr}) => {
                             {`${loaded ? 'Coming Soon!' : ''}`}
                         </h1>}
                     </div>
+                    {item.desc && <div className={`absolute flex bottom-4 px-4 left-4 h-[40px] 
+                                        w-auto z-10 rounded-xl border-[1px] backdrop-blur-sm 
+                                        overflow-hidden shadow-md ${colours}`}>
+                        <h3 className="my-auto text-sm">{item.desc}</h3>
+                    </div>}
                     <p className="hidden">{item.alt}</p>
                 </div>
             </a>
