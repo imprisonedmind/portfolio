@@ -33,13 +33,13 @@ const arr = [
 const arr2 = [
     {
         'src': '/Images/portal.png',
-        'link': '/testing',
+        'link': '/Work/Dashboard',
         'alt': 'Portal UI Design',
         'desc': '2022 - Custom Monitoring'
     },
     {
         'src': '/Images/hyyp.png',
-        'link': '/api',
+        'link': '/Work/SecurityApp',
         'alt': 'Alarm App UI Design',
         'desc': '2022 - Mobile Alarm App'
     },
