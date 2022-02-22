@@ -7,8 +7,6 @@ const NavBar = () => {
     const [colour, setColour] = useState()
     const router = useRouter()
 
-    console.log(router)
-
     useEffect(() => {
         if (router.asPath.includes('Work')) {
             setColour('bg-green-500')

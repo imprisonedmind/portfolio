@@ -38,7 +38,7 @@ export const getNowPlaying = async () => {
   });
 };
 
-const CurrentlyPlaying = async (_, res) => {
+const Index = async (_, res) => {
   const response = await getNowPlaying();
 
   if (response.status === 204 || response.status > 400) {
@@ -63,4 +63,4 @@ const CurrentlyPlaying = async (_, res) => {
   });
 };
 
-export default CurrentlyPlaying
+export default Index

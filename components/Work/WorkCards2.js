@@ -1,12 +1,18 @@
 import {Fragment, useState} from "react"
 import Image from "next/image"
-import Link from "next/link"
+import useSWR from "swr";
 
-const WorkCards2 = ({arr, colours}) => {
-    const [loaded, setLoaded] =useState(false)
+const fetcher = (url) => fetch(url).then((res) => res.json())
+
+const WorkCards2 = ({endPoint, colours}) => {
+    const [loaded, setLoaded] = useState(false)
+    const { data, error } = useSWR(endPoint, fetcher)
+
+    if (error) return <div>api error</div>
+    if (!data) return <div>loading</div>
 
     return (<Fragment>
-        {arr.map(item => {
+        {data.map(item => {
             return <a
                 target={'-_blank'}
                 key={Math.random(item.length)}

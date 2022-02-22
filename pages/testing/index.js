@@ -1,87 +1,66 @@
-import {useCallback, useEffect, useState} from "react"
+import useSWR from "swr";
+import {useState} from "react";
+
+const fetcher = (url) => fetch(url).then((res) => res.json())
 
 const Testing = () => {
-    const [phraseState, setPhraseState] = useState([])
-    const [currentPhrase, setCurrentPhrase] = useState([])
-    const [colour, setColour] = useState(['text-blue-500', 'text-red-500', 'text-green-500', 'text-purple-500'])
-    const phrase = ['person', 'designer', 'coder', 'creative']
-    let isDeleting = false
-    let i = 0
-    let j = 0
+    const {data, error} = useSWR('/api/blog', fetcher)
+    const [title, setTitle] = useState()
+    const [content, setContent] = useState()
 
-    const writePhrase = () => {
-        // Join array to array
-        setCurrentPhrase([...phraseState.join('')])
-        // Writer Loop
-        if (i < phrase.length) {
-
-            if (!isDeleting && j <= phrase[i].length) {
-                setPhraseState([phraseState.push(...phrase[i][j])])
-                j++
-            }
-
-            if (isDeleting && j <= phrase[i].length) {
-                setPhraseState([phraseState.pop(phrase[i][j])])
-                j--
-            }
-
-            if (j == phrase[i].length) {
-                isDeleting = true;
-            }
-
-            if (isDeleting && j == 0) {
-                isDeleting = false
-                setPhraseState([]);
-                if (phrase[i] == 'person') {
-                    setTimeout(() => {
-                        setColour([colour[0]])
-                    }, 1000);
-
-                }
-                if (phrase[i] == 'designer') {
-                    setTimeout(() => {
-                        setColour([colour[1]])
-                    }, 1000);
-
-                }
-                if (phrase[i] == 'coder') {
-                    setTimeout(() => {
-                        setColour([colour[2]])
-                    }, 1000);
-
-                }
-                if (phrase[i] == 'creative') {
-                    setTimeout(() => {
-                        setColour([colour[3]])
-                    }, 1000);
-
-                }
-                i++
-                if (i == phrase.length) {
-                    setTimeout(() => {
-                        i = 0
-                    }, 2000);
-                }
-
-            }
-        }
-        setTimeout(() => {
-            writePhrase();
-            return
-        }, 700);
+    const SubmitPost = async () => {
+        const response = await fetch('/api/blog', {
+            method: 'POST',
+            body: JSON.stringify({title, content}),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        })
+        const data = await response.json()
+        console.log(data)
     }
 
-    useEffect(() => {
-        writePhrase()
-    }, [])
+
+    if (error) return <div>failed to load</div>
+    if (!data) return <div className={`text-white`}>loading...</div>
+
+    console.log(title)
 
     return (
-        <div className={`h-screen w-screen text-3xl font-bold text-orange-500 ${colour}`}>
-            <div className="flex items-center h-12 w-auto">
-                <p className="underline">{currentPhrase}</p>
-                <div className={`animate-blink h-3/4 w-1 ml-1 bg-white`}></div>
+        <div className={`grid grid-cols-2 text-white text-xl`}>
+            {/* post */}
+            <div className={`col-span-1`}>
+                <p>Post</p>
+                <div>
+                    <p>title:</p>
+                    <input
+                        className={`text-black`}
+                        onChange={(e) => setTitle(e.target.value)}/>
+                </div>
+                <div>
+                    <p>content:</p>
+                    <input
+                        className={`text-black`}
+                        onChange={(e) => setContent(e.target.value)}/>
+                </div>
+                <button
+                    className={`bg-red-500`}
+                    onClick={() => SubmitPost()}
+                >Post</button>
+
             </div>
 
+            {/* posted */}
+            <div className={`col-span-1`}>
+                <p>posted</p>
+                {data.map(item => {
+                    return <div key={item}>
+                        <p>{item.title}</p>
+                        <p>{item.date}</p>
+                        <p>{item.content}</p>
+                    </div>
+                })}
+            </div>
         </div>
     )
 }
