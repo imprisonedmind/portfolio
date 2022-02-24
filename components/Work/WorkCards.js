@@ -18,11 +18,9 @@ const WorkCards = ({endPoint, colours}) => {
                 passHref
                 key={Math.random(item.alt.length)}
                 href={item.link}>
-                <div className={`${!loaded ? `animate-pulse` : null} 
-                     relative flex  h-[400px] w-[300px] mx-4 mb-12 
-                     cursor-pointer hover:scale-[1.05] duration-200 
-                     ease-in-out rounded-3xl overflow-hidden 
-                     backdrop-blur-md bg-gray-50/10`}>
+                <div className={`${!loaded ? `animate-pulse` : null} relative flex 
+                h-[400px] w-full md:w-[300px] mx-4 mb-12 cursor-pointer hover:scale-[1.05] 
+                duration-200 ease-in-out rounded-3xl overflow-hidden backdrop-blur-md bg-gray-50/10`}>
                     <Image
                         alt={item.alt}
                         src={item.src}

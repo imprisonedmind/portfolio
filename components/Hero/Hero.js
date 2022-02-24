@@ -51,9 +51,9 @@ const Hero = () => {
     return (
         <div className={`h-auto  w-full`}>
             <TypeWriter />
-            <div className='flex group flex-wrap item-center justify-center w-full h-auto mt-12 px-40'>
-                <div className='realtive w-full h-[500px] rotate-[3deg] rounded-3xl backdrop-blur-sm bg-gray-50/10' />
-                <div className='absolute  w-1/2 h-[500px] -rotate-[1deg] rounded-3xl backdrop-blur-sm overflow-hidden bg-gray-50/10'>
+            <div className='flex group flex-wrap item-center justify-center w-full h-auto mt-12 px-[5%] md:px-40'>
+                <div className='realtive w-full h-[210px] md:h-[500px] rotate-[3deg] rounded-3xl backdrop-blur-sm bg-gray-50/10' />
+                <div className='absolute w-5/6 md:w-1/2 h-[200px] md:h-[500px] -rotate-[1deg] rounded-3xl backdrop-blur-sm overflow-hidden bg-gray-50/10'>
                     <video poster={'/Images/showreel.png'} ref={vid} className='w-full h-auto' autoPlay muted>
                         <source src={vidSrc} type={'video/mp4'} />
                     </video> :

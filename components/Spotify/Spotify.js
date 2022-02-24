@@ -17,7 +17,7 @@ const Spotify = ({showTracks, setShowTracks}) => {
         </div>
     </div>
 
-    return (<div className="w-full">
+    return (<div className="hidden md:flex-col md:flex w-full">
             {/* Top Tracks */}
             <Text size={"font-thin"} style={"text-md mb-2 opacity-50"} value={`I'm Listening to`}/>
             {/* Currently Playing */}

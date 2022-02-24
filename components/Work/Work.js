@@ -4,8 +4,8 @@ import WorkCards2 from "./WorkCards2"
 
 const Work = () => {
     return (
-        <div className="h-auto w-full mt-[150px]">
-            <h1 className="text-[30px] text-center font-bold">Have a look at some of my work!</h1>
+        <div className="hidden md:flex h-auto w-full mt-20 md:mt-[150px]">
+            <h1 className="tex-3xl md:text-[30px] text-center font-bold">Have a look at some of my work!</h1>
             <div className="flex flex-wrap justify-around w-full h-auto mt-7">
                 <div className="w-full pl-7 mb-4 text-sm opacity-50 text-green-500">
                     <h1>UI Design</h1>

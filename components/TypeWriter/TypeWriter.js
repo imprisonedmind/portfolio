@@ -92,7 +92,7 @@ const Hero = () => {
     }, [])
 
     return (
-    <div className={`flex items-center h-[40px] w-full mt-20 pl-[40%] text-[40px] font-bold  ${`text-${colour}`}`}>
+    <div className={`flex items-center h-[40px] w-full mt-10 md:mt-20 pl-[20%] md:pl-[40%] text-[40px] font-bold  ${`text-${colour}`}`}>
             <h1 className="mr-2 text-white">{`I'm a`}</h1>
             <h1>{currentPhrase}</h1>
             <div className={`${blinker} h-5/6 mt-auto w-1 rounded-full ml-1 bg-white `}></div>

@@ -7,7 +7,7 @@ import WorkCards2 from "../../components/Work/WorkCards2"
 
 const Work = () => {
     return (<PageLayout>
-        <div className="flex flex-wrap justify-around w-full h-auto mt-7 px-[15%]">
+        <div className="flex flex-wrap justify-around w-full h-auto mt-7 px-[5%] md:px-[15%]">
             <div className="w-full pl-7 mb-4 text-sm opacity-50 text-green-500">
                 <h1>UI Design</h1>
             </div>
