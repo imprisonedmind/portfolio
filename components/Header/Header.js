@@ -89,6 +89,7 @@ const Landing = () => {
                                 layout={'responsive'}
                                 height={400}
                                 width={400}
+                                className={`object-contain`}
                                 onLoadingComplete={() => setLoaded(true)}
                             />
                         </motion.div>

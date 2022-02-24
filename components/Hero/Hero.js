@@ -5,7 +5,7 @@ import {PauseIcon, PlayIcon} from "@heroicons/react/solid"
 const Hero = () => {
     const [loaded, setLoaded] = useState(false)
     const [paused, setPaused] = useState(false)
-    const vidSrc = (`/Videos/showreel.mp4`)
+    const vidSrc = (`/Videos/showreel.mp4#t=8,40`)
     const vid = useRef()
 
     const handleClick = () => {
